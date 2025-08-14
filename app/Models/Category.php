@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Movie; 
 
 class Category extends Model
 {
@@ -11,8 +12,8 @@ class Category extends Model
 
     protected $fillable = ['name'];
 
-    public function filmes()
+    public function movies()
     {
-        return $this->hasMany(Filme::class);
+        return $this->hasMany(Movie::class);
     }
 }
